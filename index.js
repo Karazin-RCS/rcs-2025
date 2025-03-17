@@ -21,8 +21,58 @@ const { Vector } = require("./Vector");
 // console.log(v3);
 
 // test Facet
-const a = new Point(1, 1, 1);
-const b = new Point(2, 1, 1);
-const c = new Point(1, 2, 1);
-const facet = new Facet(a, b, c);
-console.log(facet);
+// const a = new Point(1, 1, 1);
+// const b = new Point(2, 1, 1);
+// const c = new Point(1, 2, 1);
+// const facet = new Facet(a, b, c);
+// console.log(facet);
+
+const phi = Math.PI + Math.PI / 4;
+const tg = Math.tan(phi);
+
+function convertRadianToDegree() {}
+
+function convertDegreeToRadian() {}
+
+function theoryTriangleBSP(
+  step = 1,
+  angleConstName = "phi",
+  constAngle = 0,
+  a = 1,
+  b = 1,
+  lambda = 0.03
+) {
+  const rcs = [];
+  for (let angle = 0; alpha < 360; angle += step) {
+    if ((angleConstName = "phi")) {
+      rcs.push(theoryTriangleRCS(constAngle, angle, a, b, lambda));
+    } else {
+      rcs.push(theoryTriangleRCS(angle, constAngle, a, b, lambda));
+    }
+  }
+  /// draw diagramm
+}
+/**
+ * Calculate RCS for triangle plate by KOBAK
+ * @param {number} phi spherical angle PHI in radian
+ * @param {number} thetha spherical angle THETA in radian
+ * @param {number} a size of the semi-base of the triangle
+ * @param {number} b size of the normal of the triangle
+ * @param {number} lambda // vawelength in m
+ * @returns
+ */
+function theoryTriangleRCS(phi, theta, a = 1, b = 1, lambda = 0.03) {
+  let rcs;
+  /**
+   *
+   * @param {number} phi spherical angle PHI in radian
+   * @param {number} thetha spherical angle THETA in radian
+   * @returns
+   */
+  function convertAngleToTheoryAngle(phi, thetha) {
+    let phiT;
+    let thetaT;
+    return { phiT, thetaT };
+  }
+  return rcs;
+}
