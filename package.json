@@ -1,0 +1,31 @@
+{
+  "name": "rcs_2025",
+  "version": "1.0.0",
+  "description": "Програма розрахунку ЕПР складних об'єктів для курсу \"Моделювання розсіяння електромагнітних хвиль на об`єктах складної форми\" кафедри теор. радіофізики факультетут РБЕКС ХНУ імені В.Н.Караіна.",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karazin-RCS/rcs-2025.git"
+  },
+  "keywords": [
+    "rcs",
+    "modeling",
+    "radiolocation"
+  ],
+  "author": "vlad-khrychov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karazin-RCS/rcs-2025/issues"
+  },
+  "homepage": "https://github.com/Karazin-RCS/rcs-2025#readme",
+  "dependencies": {
+    "chartjs-node-canvas": "^5.0.0"
+  }
+}

@@ -30,9 +30,13 @@ const { Vector } = require("./Vector");
 const phi = Math.PI + Math.PI / 4;
 const tg = Math.tan(phi);
 
-function convertRadianToDegree() {}
+function convertRadianToDegree(radian) {
+  return (radian * 180) / Math.PI;
+}
 
-function convertDegreeToRadian() {}
+function convertDegreeToRadian(degree) {
+  return (degree * Math.PI) / 180;
+}
 
 function theoryTriangleBSP(
   step = 1,
@@ -43,7 +47,7 @@ function theoryTriangleBSP(
   lambda = 0.03
 ) {
   const rcs = [];
-  for (let angle = 0; alpha < 360; angle += step) {
+  for (let angle = 0; angle < 360; angle += step) {
     if ((angleConstName = "phi")) {
       rcs.push(theoryTriangleRCS(constAngle, angle, a, b, lambda));
     } else {
